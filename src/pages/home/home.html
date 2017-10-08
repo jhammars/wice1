@@ -1,14 +1,15 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  ---
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  
+   <p *ngFor="let item of items | async">
+     {{ item.name }} is {{ item.price }}
+   </p>    
+    
+  testing 12345
+   <!--<a href="#" (click)="goToMyPage()">Go to Mypage</a>-->
+   <button ion-button (click)="goToMyPage()">Mypage button</button>
+
 </ion-content>
