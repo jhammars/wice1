@@ -12,6 +12,7 @@ log.txt
 .vscode/
 npm-debug.log*
 ng-fi-22-firebase-adminsdk-1gbl5-091bc27bf6.json
+src/environment.ts
 
 .idea/
 .sourcemaps/
