@@ -13,11 +13,11 @@ import { NavController, NavParams } from 'ionic-angular';
 export class HomePage {
     itemCollection: AngularFirestoreCollection<Item>;
     items: Observable<Item[]>
-    myCustomId: number;
+    myCustomId: number = 12;
     constructor(private afs: AngularFirestore, public navCtrl: NavController, public navParams: NavParams) {
         this.itemCollection = this.afs.collection<Item>('items');
         this.items = this.itemCollection.valueChanges();
-        this.myCustomId = 12;
+        // this.myCustomId = 12;
     }
 
     goToMyPage() {
