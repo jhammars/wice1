@@ -5,27 +5,28 @@
 <ion-content padding>
 	
 	<p *ngFor="let item of items | async">
-		{{ item.name }} is {{ item.price }}
-		<input [(ngModel)]="newContent">
+		name: {{ item.name }} price: {{ item.price }} age: {{ item.age }} authUid: {{ item.authorId }}
+		<!-- <input [(ngModel)]="newContent">
 		<button ion-button (click)="updateContent()">
 			Update
-		</button>
+		</button> -->
 	</p>
 
-	<form (ngSubmit)="login()">
+	<form (ngSubmit)="myAddData()">
 		<ion-item>
 			<ion-label>Name</ion-label>
-			<ion-input type="text" [(ngModel)]="user.name" name="name"></ion-input>
+			<ion-input type="text" [(ngModel)]="myData.name" name="name"></ion-input>
 		</ion-item>
 		<ion-item>
 			<ion-label>Age</ion-label>
-			<ion-textarea [(ngModel)]=" user.age" name="age"></ion-textarea>
+			<ion-textarea [(ngModel)]=" myData.age" name="age"></ion-textarea>
 		</ion-item>
-		<button ion-button type="submit" block>Add User</button>
+		<button ion-button type="submit" block>Add Data</button>
 	</form>
 
 	testing 1234
 	<!--<a href="#" (click)="goToMyPage()">Go to Mypage</a>-->
 	<button ion-button (click)="goToMyPage()">Mypage button</button>
-
+	<button ion-button (click)="myGetUserId()">Console log uid</button>
+	
 </ion-content>

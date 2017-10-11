@@ -1,7 +1,12 @@
+// Grants write if Author is provided
+// Grants read unconditionally
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write;
+  	match /{document=**} {
+      allow read;
+      allow write: if	request.resource.data.size() < 999
+    							&&	request.resource.data.authUid == request.auth.uid
+    	;
     }
   }
 }
