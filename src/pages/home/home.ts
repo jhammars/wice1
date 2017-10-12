@@ -55,7 +55,7 @@ export class HomePage implements OnInit {
         // this.noteDoc = this.afs.doc('items/YRyIWT50CuN0BiIDtIKY')
         // this.note = this.noteDoc.valueChanges()
 
-        let myCollections: any = this.afs.collection;
+        // let myCollections: any = this.afs.collection;
         // console.log(myCollections);
         // console.log(this.afs.doc('items/YRyIWT50CuN0BiIDtIKY'));                
     }
