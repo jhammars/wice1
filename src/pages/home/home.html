@@ -37,6 +37,13 @@
 
 <ion-footer>
 	<ion-toolbar>
-	  <ion-title>Footer</ion-title>
+		<ion-searchbar
+		type="text"
+		placeholder="Test"
+		[(ngModel)]="myInput"
+		[showCancelButton]="shouldShowCancel"
+		(ionInput)="onInput($event)"
+		(ionCancel)="onCancel($event)">
+		</ion-searchbar>
 	</ion-toolbar>
   </ion-footer>
